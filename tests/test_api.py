@@ -1,6 +1,8 @@
+import httpx
 import pytest
 from fastapi.testclient import TestClient
-from unittest.mock import patch, AsyncMock
+from unittest.mock import patch, AsyncMock, MagicMock
+from openai import APITimeoutError, APIConnectionError, APIError
 from app.main import app
 
 client = TestClient(app)
@@ -45,9 +47,9 @@ def test_api_successful_analysis():
     mock_results = {
         "analysis": {"business_overview": "Overview", "business_category": "Tech", "products_services": [], "target_customers": [], "strengths": [], "weaknesses": [], "inferences": []},
         "competitor_analysis": {"competitors": [], "competitive_advantages": [], "gaps": [], "opportunities": [], "evidence": [], "inferences": []},
-        "search_query_analysis": {"queries": [], "research_note": "AI"},
-        "seo_analysis": {"primary_keywords": [], "secondary_keywords": [], "long_tail_keywords": [], "seo_title": "", "meta_description": "", "content_recommendations": [], "optimization_notes": [], "research_note": ""},
-        "service_analysis": {"top_services": [], "research_note": "AI"},
+        "search_query_analysis": {"queries": [{"query": "q1", "platform": "Google", "search_intent": "Info"}], "research_note": "AI"},
+        "seo_analysis": {"primary_keywords": ["kw1"], "secondary_keywords": [], "long_tail_keywords": [], "seo_title": "Title", "meta_description": "Desc", "content_recommendations": [], "optimization_notes": [], "research_note": ""},
+        "service_analysis": {"top_services": [{"service_name": "S1", "description": "D1", "target_industry": "Tech", "customer_benefit": "Speed", "recommendation_type": "existing"}], "research_note": "AI"},
         "audience_analysis": {"primary_audience": "Audience", "secondary_audience": "", "industries": [], "business_types": [], "customer_profiles": [], "geographic_markets": [], "customer_needs": [], "customer_challenges": [], "customer_interests": [], "marketing_segments": [], "evidence": [], "inferences": []}
     }
 
@@ -56,10 +58,55 @@ def test_api_successful_analysis():
         response = client.post("/link-analysis", json={"url": "https://example.com"})
         assert response.status_code == 200
         data = response.json()
+        assert data["success"] is True
         assert data["status"] == "success"
+        assert "brand" in data
+        assert "website" in data
         assert "analysis" in data
-        assert "competitor_analysis" in data
-        assert "search_query_analysis" in data
-        assert "seo_analysis" in data
-        assert "service_analysis" in data
-        assert "audience_analysis" in data
+        # Check all 5 core sections inside unified analysis
+        unified = data["analysis"]
+        assert "competitor_analysis" in unified
+        assert "target_search_queries" in unified
+        assert "seo_improvements" in unified
+        assert "top_services" in unified
+        assert "target_audience" in unified
+
+        # Check normalization
+        assert unified["target_search_queries"][0]["platforms"] == ["Google"]
+        assert unified["seo_improvements"]["primary_keyword"] == "kw1"
+        assert unified["seo_improvements"]["recommended_title"] == "Title"
+        assert unified["top_services"][0]["target_customer"] == "Tech"
+        assert unified["top_services"][0]["main_benefit"] == "Speed"
+
+
+def test_api_ai_not_configured():
+    with patch("app.main.run_complete_analysis", new_callable=AsyncMock) as mock_run:
+        mock_run.side_effect = RuntimeError("OpenAI API key is not configured")
+        response = client.post("/link-analysis", json={"url": "https://example.com"})
+        assert response.status_code == 503
+        assert "AI service is not configured" in response.json()["detail"]
+
+
+def test_api_website_timeout():
+    with patch("app.main.extract_website", new_callable=AsyncMock) as mock_extract:
+        mock_extract.side_effect = httpx.ReadTimeout("Timeout")
+        response = client.post("/link-analysis", json={"url": "https://example.com"})
+        assert response.status_code == 504
+        assert "timed out" in response.json()["detail"]
+
+
+def test_api_website_connection_error():
+    with patch("app.main.extract_website", new_callable=AsyncMock) as mock_extract:
+        mock_extract.side_effect = httpx.ConnectError("Connection refused")
+        response = client.post("/link-analysis", json={"url": "https://example.com"})
+        assert response.status_code == 502
+        assert "Unable to connect" in response.json()["detail"]
+
+
+def test_api_openai_timeout():
+    with patch("app.main.run_complete_analysis", new_callable=AsyncMock) as mock_run:
+        mock_request = MagicMock()
+        mock_run.side_effect = APITimeoutError(request=mock_request)
+        response = client.post("/link-analysis", json={"url": "https://example.com"})
+        assert response.status_code == 504
+        assert "timed out" in response.json()["detail"]

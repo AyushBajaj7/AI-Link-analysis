@@ -8,7 +8,7 @@ client = AsyncOpenAI(api_key=OPENAI_API_KEY or "sk-placeholder")
 
 async def analyze_website(website_data):
     if not OPENAI_API_KEY:
-        raise ValueError("OpenAI API key is not configured")
+        raise RuntimeError("OpenAI API key is not configured")
 
     prompt = f"""
 Analyze the following website information.
