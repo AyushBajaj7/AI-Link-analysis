@@ -14,11 +14,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Enable CORS for cross-origin frontend or evaluation clients
+# Enable CORS for cross-origin frontend or evaluation clients (credentials disabled for wildcard origin)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

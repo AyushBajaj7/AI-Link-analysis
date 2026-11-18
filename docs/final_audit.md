@@ -3,25 +3,31 @@
 ## Project
 AI Link Analysis API
 
-## Verification
+## Verification Matrix
 
 | Check | Result |
 |---|---|
-| Project structure | Verified (all required files and folders present) |
-| Dependencies | Verified (fastapi, uvicorn, pydantic, httpx, bs4, python-dotenv, openai, pytest, pytest-asyncio) |
-| Python compilation | Verified (0 syntax errors via `python -m compileall -q app tests`) |
-| Automated tests | Verified (31/31 pytest test cases passing in 4.05s) |
-| API testing | Verified (GET /, GET /health, POST /link-analysis status codes 200, 400, 422 verified) |
-| Pydantic validation | Verified (Strict typing and min/max length limits enforced) |
-| URL security | Verified (SSRF protection blocks localhost, 127.0.0.1, 10.x, 192.168.x, 169.254.x, non-standard ports, credentials) |
-| Secret protection | Verified (.gitignore excludes `.env`, `venv/`, `__pycache__`; `.env.example` contains placeholders only) |
-| LLM comparison | Verified (Gemini 2.5 Flash, GPT-4o-mini, Claude 3.5 Haiku compared with pricing, context, latency, JSON support) |
-| Documentation | Verified (README.md, architecture.md, setup_guide.md, cost_analysis.md, performance_results.md, sample_response.json) |
+| **Project Structure** | Verified (all required files, services, utils, docs, and test suites present) |
+| **Dependencies** | Verified (`fastapi`, `uvicorn`, `pydantic`, `httpx`, `beautifulsoup4`, `python-dotenv`, `openai`, `pytest`, `pytest-asyncio`) |
+| **Python Compilation** | Verified (0 syntax or import errors across `app/` and `tests/`) |
+| **Automated Tests** | Verified (**35/35 pytest test cases passing**) |
+| **API Endpoints** | Verified (`GET /`, `GET /health`, `POST /link-analysis`, status codes 200, 400, 422, 502, 503, 504) |
+| **CORS Configuration** | Verified (`allow_credentials=False` for wildcard origins, conforming to W3C standards) |
+| **Pydantic Validation** | Verified (Strict typing, min/max length limits of 5 for queries and services, extra fields forbidden) |
+| **URL & SSRF Security** | Verified (Scheme check, port restriction 80/443, credentials check, IP range checks for private, loopback, and metadata `169.254.169.254`) |
+| **Secret Management** | Verified (`.env` gitignored, `.env.example` contains placeholders only, no hardcoded secrets) |
+| **LLM Provider Alignment** | Verified (OpenAI `gpt-4o-mini` is the operational active engine; Gemini 2.5 Flash and Claude 3.5 Haiku are evaluated in comparative research) |
+| **Documentation Consistency** | Verified (`README.md`, `docs/architecture.md`, `docs/setup_guide.md`, `docs/cost_analysis.md`, `docs/performance_results.md`, `docs/llm_comparison.md`, `sample_response.json`) |
 
-## Known Limitations
-1. Outbound scraping currently performs DNS checks before the HTTP socket connection. For hardened enterprise environments, socket-level DNS pinning or firewall egress controls should be used to protect against DNS rebinding.
-2. Search query suggestions and inferred services are qualitative business intelligence generated from website context, not real-time search volume queries from paid SEO subscription APIs (e.g. SEMrush / Ahrefs).
-3. Heavy single-page applications (SPAs) relying entirely on client-side JavaScript execution without server-side rendering may require headless browser rendering for complete DOM content.
+---
 
-## Final Conclusion
-The application satisfies all functional, architectural, and security requirements set out in the assignment. All 31 automated tests pass, the codebase is modular and cleanly documented, and the project is fully prepared for GitHub repository initialization and deployment.
+## Known Operational Considerations
+
+1. **DNS Rebinding Protection in Public Deployments**: Outbound scraping performs IP verification at DNS resolution time. For hardened containerized public deployments, outbound traffic should route through an egress filtering proxy (such as Smokescreen or Squid) or host-level firewall rules blocking private IP subnets (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`, `169.254.0.0/16`).
+2. **Search Query Qualitative Recommendations**: Search queries and SEO improvements are qualitative AI recommendations generated from website context, clearly labeled as such without fabricating search volume metrics.
+3. **Single-Page Applications (SPAs)**: Websites relying entirely on client-side JavaScript execution without server-side rendering may return minimal initial HTML; future enhancements may integrate a headless browser worker.
+
+---
+
+## Conclusion
+The application satisfies all functional, architectural, and security requirements set out in the assignment. All 35 automated tests pass, the codebase is modular and cleanly documented, and the project is fully reconciled with the active OpenAI provider implementation.

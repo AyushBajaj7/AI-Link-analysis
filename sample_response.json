@@ -1,4 +1,8 @@
 {
+  "_meta": {
+    "status": "reference_mock_payload",
+    "description": "Illustrative reference response conforming strictly to the official API response schema. To run a live analysis against a specific website, configure an active OPENAI_API_KEY in .env and make a POST request to /link-analysis or use the Swagger documentation at /docs."
+  },
   "success": true,
   "website": "https://example.com",
   "brand": {
