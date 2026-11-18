@@ -1,0 +1,267 @@
+{
+  "success": true,
+  "website": "https://example.com",
+  "brand": {
+    "name": "Example Domain",
+    "category": "Technology & Digital Services",
+    "summary": "Example Domain is a leading provider in the Technology & Digital Services space, delivering innovative solutions to enhance productivity and customer satisfaction."
+  },
+  "analysis": {
+    "competitor_analysis": {
+      "brand_name": "Example Domain",
+      "business_overview": "Example Domain is a leading provider in the Technology & Digital Services space, delivering innovative solutions to enhance productivity and customer satisfaction.",
+      "main_category": "Technology & Digital Services",
+      "main_products_services": [
+        "Core Solution Offering",
+        "Digital Consulting",
+        "Platform Services",
+        "Enterprise Support",
+        "Custom Implementation"
+      ],
+      "competitors": [
+        {
+          "brand_name": "Example Domain Global Alternative 1",
+          "website_or_domain": "competitor1.example.com",
+          "main_service": "Enterprise Technology & Digital Services",
+          "target_market": "Large Enterprise Organizations",
+          "key_strengths": [
+            "Global brand recognition",
+            "Extensive legacy customer base",
+            "Broad feature portfolio"
+          ],
+          "weaknesses_or_gaps": [
+            "High cost structure",
+            "Slower innovation cycle",
+            "Complex onboarding process"
+          ],
+          "competitive_advantage_over_them": "Example Domain offers superior agility, more modern user experience, and cost-effective deployment.",
+          "source_type": "ai_identified"
+        },
+        {
+          "brand_name": "Example Domain Challenger 2",
+          "website_or_domain": "competitor2.example.com",
+          "main_service": "Modern Technology & Digital Services",
+          "target_market": "Mid-market & High-growth Companies",
+          "key_strengths": [
+            "Aggressive marketing",
+            "Competitive entry pricing"
+          ],
+          "weaknesses_or_gaps": [
+            "Limited customization capabilities",
+            "Less responsive support SLAs"
+          ],
+          "competitive_advantage_over_them": "Example Domain provides deeper domain specialization and end-to-end client support.",
+          "source_type": "ai_identified"
+        },
+        {
+          "brand_name": "Example Domain Specialist 3",
+          "website_or_domain": "competitor3.example.com",
+          "main_service": "Niche Technology & Digital Services Solutions",
+          "target_market": "Startups & Specialist Teams",
+          "key_strengths": [
+            "Fast turn-around time",
+            "Niche feature focus"
+          ],
+          "weaknesses_or_gaps": [
+            "Lack of scalability",
+            "Smaller development team"
+          ],
+          "competitive_advantage_over_them": "Example Domain brings enterprise-grade architecture and robust scalability.",
+          "source_type": "ai_identified"
+        }
+      ],
+      "brand_strengths": [
+        "Direct domain focus and clear value proposition",
+        "Modern and responsive user digital touchpoints",
+        "Flexible solutions tailored to evolving client demands"
+      ],
+      "brand_advantages": [
+        "Faster time to value compared to traditional legacy vendors",
+        "Dedicated client support and customized implementation plans"
+      ],
+      "market_opportunities": [
+        "Expand presence in emerging high-growth regional markets",
+        "Build interactive self-service product demonstrations",
+        "Leverage customer case studies and ROI calculators"
+      ]
+    },
+    "target_search_queries": [
+      {
+        "query": "Best technology & digital services provider for growing companies",
+        "platforms": [
+          "Google Search"
+        ],
+        "search_intent": "Commercial Investigation",
+        "business_relevance": "Captures high-intent prospects researching solutions in Technology & Digital Services.",
+        "target_audience": "Chief Technology Officers and Procurement Managers"
+      },
+      {
+        "query": "Example Domain solutions review and client results",
+        "platforms": [
+          "LinkedIn"
+        ],
+        "search_intent": "B2B Evaluation",
+        "business_relevance": "Builds peer-reviewed credibility and validates enterprise capability.",
+        "target_audience": "Enterprise Executives and Operations Directors"
+      },
+      {
+        "query": "How to modernize your business with technology & digital services",
+        "platforms": [
+          "Google Search",
+          "X (Twitter)"
+        ],
+        "search_intent": "Informational / Educational",
+        "business_relevance": "Positions the brand as a thought leader and attracts early funnel traffic.",
+        "target_audience": "Department Heads and Innovators"
+      },
+      {
+        "query": "Innovative technology & digital services design and workflow ideas",
+        "platforms": [
+          "Instagram"
+        ],
+        "search_intent": "Inspiration / Visual Discovery",
+        "business_relevance": "Engages younger professionals and visual decision-makers.",
+        "target_audience": "Design Leads and Creative Directors"
+      },
+      {
+        "query": "Affordable technology & digital services implementation partner",
+        "platforms": [
+          "Facebook",
+          "Google Search"
+        ],
+        "search_intent": "Service Search / Purchase Intent",
+        "business_relevance": "Direct conversion opportunity for cost-conscious decision makers.",
+        "target_audience": "Small-to-Medium Business Owners"
+      }
+    ],
+    "seo_improvements": {
+      "keywords": {
+        "primary_keyword": "Example Domain Technology Solutions",
+        "secondary_keywords": [
+          "top technology & digital services",
+          "technology & digital services platforms",
+          "enterprise digital transformation"
+        ],
+        "long_tail_keywords": [
+          "best technology & digital services for modern companies",
+          "how to choose a technology & digital services partner",
+          "cost effective technology & digital services tools"
+        ],
+        "business_keywords": [
+          "technology & digital services",
+          "business efficiency",
+          "workflow automation",
+          "scalable technology"
+        ]
+      },
+      "title": {
+        "recommended_title": "Example Domain | Leading Technology & Digital Services & Innovation",
+        "primary_keyword_used": "Example Domain Technology",
+        "title_structure": "Brand Name | Primary Industry Keyword | Core Benefit"
+      },
+      "meta_description": {
+        "recommended_description": "Discover how Example Domain delivers world-class technology & digital services to boost efficiency, streamline workflows, and scale your business.",
+        "character_count": 142,
+        "keywords_included": [
+          "Example Domain",
+          "technology & digital services",
+          "efficiency"
+        ]
+      },
+      "supporting_content": [
+        "In-depth industry case studies showcasing measurable customer ROI",
+        "Comprehensive Frequently Asked Questions (FAQ) schema for common buyer objections",
+        "Targeted landing pages for each primary vertical segment",
+        "Educational comparison guides against traditional industry workflows"
+      ]
+    },
+    "top_services": [
+      {
+        "service_name": "Core Solution Offering",
+        "description": "Comprehensive core solution offering designed to streamline operational workflows and maximize client ROI.",
+        "target_industry": "Technology & Digital Services",
+        "target_customer": "Decision makers, IT leaders, and business managers",
+        "main_benefit": "Accelerates business outcomes and reduces operational friction.",
+        "identification_type": "ai_inferred"
+      },
+      {
+        "service_name": "Digital Consulting",
+        "description": "Comprehensive digital consulting designed to streamline operational workflows and maximize client ROI.",
+        "target_industry": "Technology & Digital Services",
+        "target_customer": "Decision makers, IT leaders, and business managers",
+        "main_benefit": "Accelerates business outcomes and reduces operational friction.",
+        "identification_type": "ai_inferred"
+      },
+      {
+        "service_name": "Platform Services",
+        "description": "Comprehensive platform services designed to streamline operational workflows and maximize client ROI.",
+        "target_industry": "Technology & Digital Services",
+        "target_customer": "Decision makers, IT leaders, and business managers",
+        "main_benefit": "Accelerates business outcomes and reduces operational friction.",
+        "identification_type": "ai_inferred"
+      },
+      {
+        "service_name": "Enterprise Support",
+        "description": "Comprehensive enterprise support designed to streamline operational workflows and maximize client ROI.",
+        "target_industry": "Technology & Digital Services",
+        "target_customer": "Decision makers, IT leaders, and business managers",
+        "main_benefit": "Accelerates business outcomes and reduces operational friction.",
+        "identification_type": "ai_inferred"
+      },
+      {
+        "service_name": "Custom Implementation",
+        "description": "Comprehensive custom implementation designed to streamline operational workflows and maximize client ROI.",
+        "target_industry": "Technology & Digital Services",
+        "target_customer": "Decision makers, IT leaders, and business managers",
+        "main_benefit": "Accelerates business outcomes and reduces operational friction.",
+        "identification_type": "ai_inferred"
+      }
+    ],
+    "target_audience": {
+      "primary_audience": [
+        "Chief Executive Officers and Business Owners",
+        "VP of Technology / IT Directors"
+      ],
+      "secondary_audience": [
+        "Operations Managers",
+        "Product and Innovation Leads"
+      ],
+      "industries": [
+        "Technology & Digital Services",
+        "SaaS & Technology",
+        "Professional Services",
+        "Healthcare & Finance"
+      ],
+      "business_types": [
+        "High-growth venture-backed startups",
+        "Established mid-market enterprises",
+        "Forward-thinking SMBs"
+      ],
+      "customer_profiles": [
+        "Efficiency-focused technology buyer seeking streamlined solutions",
+        "Strategic executive looking to cut overhead and modernize tech stack"
+      ],
+      "geographical_focus": "Global / North America & Europe",
+      "customer_needs": [
+        "Need for rapid and reliable deployment without lengthy downtime",
+        "Transparent and predictable pricing models",
+        "High-touch customer support with clear SLAs"
+      ],
+      "customer_interests": [
+        "Productivity optimization",
+        "Cloud architecture and digital transformation",
+        "AI and automation advancements"
+      ],
+      "recommended_marketing_segments": [
+        "Account-Based Marketing (ABM) targeting mid-market IT directors",
+        "Educational LinkedIn campaigns highlighting customer case studies",
+        "High-intent search campaigns on Google targeting replacement solutions"
+      ]
+    }
+  },
+  "metadata": {
+    "processing_time_seconds": 0.13,
+    "provider": "gemini",
+    "model": "gemini-2.5-flash"
+  }
+}

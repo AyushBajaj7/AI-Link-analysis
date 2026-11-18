@@ -1,0 +1,285 @@
+{
+  "message": "Website analysis completed successfully",
+  "status": "success",
+  "website_data": {
+    "url": "https://www.python.org",
+    "title": "Welcome to Python.org",
+    "description": "The official home of the Python Programming Language",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Functions Defined"
+      },
+      {
+        "tag": "h1",
+        "text": "All the Flow You’d Expect"
+      }
+    ],
+    "content": "Python is a powerful, expressive programming language that lets you work quickly and integrate systems effectively.",
+    "word_count": 455
+  },
+  "analysis": {
+    "business_overview": "Python Software Foundation manages and coordinates the ongoing open-source development of the Python programming language.",
+    "business_category": "Software & Open Source Technology",
+    "products_services": [
+      "Python programming language interpreter and standard library",
+      "Python Package Index (PyPI) infrastructure",
+      "Official developer documentation and PEP specifications",
+      "Community grant funding and PyCon conferences"
+    ],
+    "target_customers": [
+      "Software developers and engineers",
+      "Data scientists and machine learning practitioners",
+      "Academic institutions and students",
+      "Enterprise software organizations"
+    ],
+    "strengths": [
+      "Vast global open-source community",
+      "Massive ecosystem of third-party packages via PyPI",
+      "Standard language of modern AI and data science"
+    ],
+    "weaknesses": [
+      "Dynamic execution speed compared to compiled languages",
+      "Historically limited native mobile application story"
+    ],
+    "inferences": [
+      "Non-profit funding model reliant on corporate sponsors and community donations"
+    ]
+  },
+  "competitor_analysis": {
+    "competitors": [
+      {
+        "name": "Ruby / Ruby Association",
+        "website": "https://www.ruby-lang.org",
+        "verification_status": "unverified",
+        "reason": "Alternative interpreted scripting language with strong web ecosystem",
+        "strengths": ["Elegant syntax", "Strong Rails community"],
+        "weaknesses": ["Smaller machine learning ecosystem"]
+      },
+      {
+        "name": "Node.js Foundation",
+        "website": "https://nodejs.org",
+        "verification_status": "unverified",
+        "reason": "Popular server-side JavaScript runtime competing for backend web services",
+        "strengths": ["High asynchronous I/O performance", "Single language across frontend/backend"],
+        "weaknesses": ["Less suited for numerical computing"]
+      },
+      {
+        "name": "Go (Golang)",
+        "website": "https://go.dev",
+        "verification_status": "unverified",
+        "reason": "High-performance compiled language popular for cloud-native microservices",
+        "strengths": ["Concurrency primitives", "Fast compilation"],
+        "weaknesses": ["Less suited for exploratory data science"]
+      }
+    ],
+    "competitive_advantages": [
+      "Unmatched dominance in machine learning, artificial intelligence, and data analysis",
+      "Clean, readable syntax making it the premier language for education and rapid prototyping"
+    ],
+    "gaps": [
+      "Concurrency model historically constrained by the Global Interpreter Lock (GIL)"
+    ],
+    "opportunities": [
+      "Expand no-GIL and free-threaded execution in modern versions",
+      "Strengthen WebAssembly (Pyodide) browser runtime integration"
+    ],
+    "evidence": [
+      "Extensive downloadable releases, PyPI repository links, and comprehensive documentation"
+    ],
+    "inferences": [
+      "High organizational reliance on volunteer core developer contributions"
+    ]
+  },
+  "search_query_analysis": {
+    "queries": [
+      {
+        "query": "learn python programming for beginners",
+        "platform": "Google",
+        "search_intent": "Educational / Informational",
+        "relevance": "Direct entry point for new developers seeking official tutorials",
+        "target_audience": "Students and novice programmers"
+      },
+      {
+        "query": "python developer community and events",
+        "platform": "LinkedIn",
+        "search_intent": "Networking / Professional",
+        "relevance": "Attracts engineering professionals to conferences and meetups",
+        "target_audience": "Senior engineers and hiring managers"
+      },
+      {
+        "query": "best python libraries for machine learning",
+        "platform": "Google",
+        "search_intent": "Commercial / Technical",
+        "relevance": "Captures practitioners researching framework ecosystems",
+        "target_audience": "Data scientists and ML engineers"
+      },
+      {
+        "query": "python coding tips and quick syntax",
+        "platform": "Instagram",
+        "search_intent": "Visual Inspiration",
+        "relevance": "Engages younger demographics with digestible code snippets",
+        "target_audience": "Coding bootcamp students"
+      },
+      {
+        "query": "python latest release features and benchmarks",
+        "platform": "X (Twitter)",
+        "search_intent": "Tech News & Updates",
+        "relevance": "Connects core developers and tech influencers",
+        "target_audience": "Open source contributors and architects"
+      }
+    ],
+    "research_note": "These are AI-generated recommendations, not measured search-volume results."
+  },
+  "seo_analysis": {
+    "primary_keywords": [
+      "Python programming language",
+      "Python documentation",
+      "Download Python"
+    ],
+    "secondary_keywords": [
+      "PyPI packages",
+      "Python tutorials",
+      "Python Software Foundation"
+    ],
+    "long_tail_keywords": [
+      "how to install python on windows 11",
+      "python latest version release notes",
+      "best free python programming guide"
+    ],
+    "seo_title": "Welcome to Python.org | Official Python Programming Language",
+    "meta_description": "The official home of Python. Download the latest releases, explore comprehensive documentation, browse PyPI packages, and join the global community.",
+    "content_recommendations": [
+      "Interactive browser-based beginner code playground",
+      "Consolidated performance guide highlighting Python 3.13+ improvements",
+      "Enhanced enterprise security and package provenance documentation"
+    ],
+    "optimization_notes": [
+      "Improve mobile viewport loading speed for documentation pages",
+      "Ensure consistent semantic H1 hierarchy across all subdomains"
+    ],
+    "research_note": "These are AI-generated SEO recommendations, not measured ranking or search-volume data."
+  },
+  "service_analysis": {
+    "top_services": [
+      {
+        "service_name": "Core Language Runtime & Standard Library",
+        "description": "Continuous design, maintenance, and distribution of the open-source Python interpreter.",
+        "target_industry": "Software Engineering & Technology",
+        "customer_benefit": "Provides a robust, universally compatible programming foundation.",
+        "recommendation_type": "existing",
+        "reason": "Primary offering documented across all download pages"
+      },
+      {
+        "service_name": "Python Package Index (PyPI)",
+        "description": "Central repository hosting hundreds of thousands of open-source libraries.",
+        "target_industry": "Developer Tools & DevOps",
+        "customer_benefit": "Allows seamless dependency resolution and package publication.",
+        "recommendation_type": "existing",
+        "reason": "Core infrastructure operated directly by the PSF"
+      },
+      {
+        "service_name": "Official Documentation & Language References",
+        "description": "Exhaustive API references, tutorials, and PEP design proposals.",
+        "target_industry": "Education & Enterprise IT",
+        "customer_benefit": "Accelerates developer onboarding and authoritative reference.",
+        "recommendation_type": "existing",
+        "reason": "Extensive documentation subsite available at docs.python.org"
+      },
+      {
+        "service_name": "Enterprise Security Advisory & Supply Chain Verification",
+        "description": "Dedicated trusted publishing and provenance attestations for critical PyPI packages.",
+        "target_industry": "Enterprise Security & FinTech",
+        "customer_benefit": "Guarantees zero-trust artifact integrity for compliance.",
+        "recommendation_type": "inferred",
+        "reason": "High-value enterprise expansion to combat package hallucination and malware"
+      },
+      {
+        "service_name": "Certified Developer Accreditation Program",
+        "description": "Standardized certification testing for enterprise Python competency.",
+        "target_industry": "Corporate Training & Education",
+        "customer_benefit": "Validates candidate proficiency for hiring organizations.",
+        "recommendation_type": "inferred",
+        "reason": "Monetization opportunity to support non-profit PSF operations"
+      }
+    ],
+    "research_note": "Existing services are based on website evidence. Inferred services are AI-generated recommendations."
+  },
+  "audience_analysis": {
+    "primary_audience": "Professional Software Engineers and Data Scientists",
+    "secondary_audience": "Engineering Leaders, Students, and Academic Researchers",
+    "industries": [
+      "Artificial Intelligence & Machine Learning",
+      "Cloud Infrastructure & DevOps",
+      "Financial Services & Quantitative Trading",
+      "Scientific Computing & Academia"
+    ],
+    "business_types": [
+      "Global Enterprise Technology Companies",
+      "High-Growth AI Startups",
+      "Universities and Research Laboratories"
+    ],
+    "customer_profiles": [
+      {
+        "profile_name": "Enterprise Software Architect",
+        "customer_type": "Technical Leader",
+        "needs": [
+          "Long-term stability and security support",
+          "High concurrency performance"
+        ],
+        "challenges": [
+          "Dependency governance across massive codebases",
+          "Microservice latency optimization"
+        ],
+        "relevant_services": [
+          "Core Language Runtime",
+          "Enterprise Security Advisory"
+        ]
+      },
+      {
+        "profile_name": "Data Science Researcher",
+        "customer_type": "Applied Scientist",
+        "needs": [
+          "Rapid prototyping and robust scientific libraries",
+          "Seamless GPU acceleration bindings"
+        ],
+        "challenges": [
+          "Complex virtual environment isolation",
+          "Reproducible experimental pipelines"
+        ],
+        "relevant_services": [
+          "PyPI Repository",
+          "Official Documentation"
+        ]
+      }
+    ],
+    "geographic_markets": [
+      "Global (North America, Europe, Asia-Pacific, Latin America, Africa)"
+    ],
+    "customer_needs": [
+      "Cross-platform compatibility across Windows, macOS, and Linux",
+      "Extensive documentation and active community troubleshooting"
+    ],
+    "customer_challenges": [
+      "Managing package dependency conflicts",
+      "Optimizing CPU-bound execution speed"
+    ],
+    "customer_interests": [
+      "Machine learning model training",
+      "API backend development",
+      "Scripting and process automation"
+    ],
+    "marketing_segments": [
+      "AI & Data Science engineering teams",
+      "Higher education computer science faculties",
+      "DevOps and system administration specialists"
+    ],
+    "evidence": [
+      "Downloads distributed across all major operating systems",
+      "Global PyCon chapters advertised on python.org"
+    ],
+    "inferences": [
+      "Worldwide distributed user community spanning hobbyists to Fortune 500 corporations"
+    ]
+  }
+}
